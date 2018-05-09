@@ -1,6 +1,12 @@
 # stock_analyse
 tushare
 
+# 0. Basic
+
+![](https://github.com/davidkorea/stock_analyse/blob/master/images/resample.jpg)
+![](https://github.com/davidkorea/stock_analyse/blob/master/images/freq.jpg)
+![](https://github.com/davidkorea/stock_analyse/blob/master/images/rolling.jpg)
+
 # 1. Get stock data by tushare
 
 ```stock_df = tushare.get_k_data(code='600519', start='2010-01-01', end='2018-05-09',ktype='60')```
