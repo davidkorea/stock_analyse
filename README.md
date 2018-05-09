@@ -29,3 +29,5 @@ resampled_df['MA 5'] = resampled_df['close'].rolling(window=5).mean()
 ```php
 resampled_df[ ['close','MA 5','MA 30','MA 60'] ].plot()
 ```
+
+![](https://github.com/davidkorea/stock_analyse/blob/master/stock_plot.png)
