@@ -27,6 +27,7 @@ def analyse_data(resampled_df):
 def plot(resampled_df):
     resampled_df[ ['close','MA 5','MA 30','MA 60'] ].plot()
     plt.tight_layout()
+    plt.savefig('./stock_plot.png')
     plt.show()
 
 def main():
