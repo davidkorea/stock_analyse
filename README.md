@@ -17,6 +17,16 @@ tushare
 ```php
 stock_df['date'] = pd.to_datetime(stock_df['date'])
 ```
+
+```
+               date    open   close    high     low   volume    code
+0  2017-11-08 14:00  649.31  652.50  654.45  648.10  11824.0  600519
+1  2017-11-08 15:00  652.50  650.38  652.50  647.17   9766.0  600519
+2  2017-11-09 10:30  648.00  652.23  654.15  644.90  13409.0  600519
+3  2017-11-09 11:30  652.00  648.25  652.39  647.55   6765.0  600519
+4  2017-11-09 14:00  648.25  647.17  649.10  646.00   5350.0  600519
+```
+
 2. set datetime to index
 ```php
 stock_df.set_index('date',inplace=True)
@@ -27,6 +37,8 @@ stock_df.set_index('date',inplace=True)
 resampled_df = stock_df.resample('D').last()
 resampled_df.dropna(inplace=True)
 ```
+ - **ONLY yyyy-mm-dd hh:mm could be resampled**
+ 
 4. rolling(window=).func()
 ```php
 resampled_df['MA 5'] = resampled_df['close'].rolling(window=5).mean()
