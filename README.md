@@ -38,6 +38,7 @@ resampled_df = stock_df.resample('D').last()
 resampled_df.dropna(inplace=True)
 ```
  - **ONLY yyyy-mm-dd hh:mm could be resampled**
+ - Because of Index column being set already, do NOT need to **stock_df['date']**.resample('D').last()
  
 4. rolling(window=).func()
 ```php
