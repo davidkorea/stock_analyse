@@ -72,5 +72,63 @@ data_df = pd.read_csv('./csv')
 ```
 
 ```
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 20248 entries, 1520 to 26278
+Data columns (total 7 columns):
+year        20248 non-null int64
+month       20248 non-null int64
+day         20248 non-null int64
+hour        20248 non-null int64
+season      20248 non-null int64
+PM_China    20248 non-null float64
+PM_US       20248 non-null float64
+dtypes: float64(2), int64(5)
+memory usage: 1.2 MB
+```
+2. data format transform
+```php
+data_df['hour'] = data_df['hour'].astype('str') + ':00'
+data_df['year'] = data_df['year'].astype('str')
+data_df['month'] = data_df['month'].astype('str')
+data_df['day'] = data_df['day'].astype('str')
+```
 
 ```
+ year month day   hour  season  PM_China  PM_US 
+ 2013     3   5   8:00       1     166.0  150.0 
+ 2013     3   5   9:00       1     165.0  163.0  
+ 2013     3   5  10:00       1     173.0  172.0   
+ 2013     3   5  11:00       1     182.0  192.0      
+ 2013     3   5  12:00       1     182.0  181.0    
+```
+```
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 20248 entries, 1520 to 26278
+Data columns (total 9 columns):
+year        20248 non-null object
+month       20248 non-null object
+day         20248 non-null object
+hour        20248 non-null object
+season      20248 non-null int64
+PM_China    20248 non-null float64
+PM_US       20248 non-null float64
+dtypes: category(2), float64(2), int64(1), object(4)
+memory usage: 1.3+ MB
+```
+
+3. combine datetime
+```php
+data_df['date'] = data_df['year'].str.cat( [ data_df['month'],data_df['day'] ], sep='-')
+data_df['timestamp'] = data_df['date'].str.cat(data_df['hour'],sep=' ')
+```
+```
+     date       timestamp  
+ 2013-3-5   2013-3-5 8:00  
+ 2013-3-5   2013-3-5 9:00  
+ 2013-3-5  2013-3-5 10:00  
+ 2013-3-5  2013-3-5 11:00  
+ 2013-3-5  2013-3-5 12:00  
+```
+
+
+
