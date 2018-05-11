@@ -121,6 +121,7 @@ memory usage: 1.3+ MB
 data_df['date'] = data_df['year'].str.cat( [ data_df['month'],data_df['day'] ], sep='-')
 data_df['timestamp'] = data_df['date'].str.cat(data_df['hour'],sep=' ')
 ```
+Multi-columns combine: new = A.str.cat( [ B, C ], sep='-' ) => A-B-C
 ```
      date       timestamp  
  2013-3-5   2013-3-5 8:00  
@@ -147,6 +148,7 @@ data_df['timesatmp'] = pd.to_datetime(data_df['timesatmp'])
 ```php
 data_df.set_index('timestamp', inplace=True)
 ```
+index column has become to the 1st column.
 ```
                      year month day   hour  season  PM_China  PM_US 
 timestamp                                                                      
