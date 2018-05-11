@@ -172,3 +172,9 @@ timestamp
 2013-03-08     1.0  231.863636  221.909091
 2013-03-09     1.0   61.478261   61.695652
 ```
+6. rolling & plot
+```php
+resampled_df['MA 7'] = resampled_df['PM_China'].rolling(window=7).mean()
+resampled_df['MA 30'] = resampled_df['PM_China'].rolling(window=30).mean()
+resampled_df[ ['MA 7'], ['MA 30'] ].plot()
+```
