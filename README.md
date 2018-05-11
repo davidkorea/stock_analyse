@@ -158,3 +158,11 @@ timestamp
 2013-03-05 11:00:00  2013     3   5  11:00       1     182.0  192.0     
 2013-03-05 12:00:00  2013     3   5  12:00       1     182.0  181.0      
 ```
+6. resample
+```php
+resampled_df = data_df.resample('D').mean()
+```
+all int/float columns will return resampled mean value
+```
+
+```
