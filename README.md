@@ -143,4 +143,16 @@ data_df['timesatmp'] = pd.to_datetime(data_df['timesatmp'])
  2013-3-5 2013-03-05 12:00:00  
 
 ```
-
+5. set index
+```php
+data_df.set_index('timestamp', inplace=True)
+```
+```
+                     year month day   hour  season  PM_China  PM_US 
+timestamp                                                                      
+2013-03-05 08:00:00  2013     3   5   8:00       1     166.0  150.0     
+2013-03-05 09:00:00  2013     3   5   9:00       1     165.0  163.0      
+2013-03-05 10:00:00  2013     3   5  10:00       1     173.0  172.0     
+2013-03-05 11:00:00  2013     3   5  11:00       1     182.0  192.0     
+2013-03-05 12:00:00  2013     3   5  12:00       1     182.0  181.0      
+```
