@@ -57,7 +57,12 @@ combine multi-columns to datetime and set to index, rolling
 
 ## 3.1 CSV data preview
 ```
-
+ year  month  day  hour  season  PM_China  PM_US
+ 2013      3    5     8       1     166.0  150.0
+ 2013      3    5     9       1     165.0  163.0
+ 2013      3    5    10       1     173.0  172.0
+ 2013      3    5    11       1     182.0  192.0
+ 2013      3    5    12       1     182.0  181.0
 ```
 
 ## 3.2 Codes
