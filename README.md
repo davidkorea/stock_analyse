@@ -66,3 +66,11 @@ combine multi-columns to datetime and set to index, rolling
 ```
 
 ## 3.2 Codes
+1. data_df
+```php
+data_df = pd.read_csv('./csv')
+```
+
+```
+
+```
