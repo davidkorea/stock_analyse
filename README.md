@@ -164,5 +164,11 @@ resampled_df = data_df.resample('D').mean()
 ```
 all int/float columns will return resampled mean value
 ```
-
+           season    PM_China       PM_US
+timestamp                                 
+2013-03-05     1.0  206.000000  216.937500
+2013-03-06     1.0  222.217391  226.043478
+2013-03-07     1.0  312.434783  323.826087
+2013-03-08     1.0  231.863636  221.909091
+2013-03-09     1.0   61.478261   61.695652
 ```
