@@ -130,5 +130,17 @@ data_df['timestamp'] = data_df['date'].str.cat(data_df['hour'],sep=' ')
  2013-3-5  2013-3-5 12:00  
 ```
 
+4. to_datetime
+```php
+data_df['timesatmp'] = pd.to_datetime(data_df['timesatmp'])
+```
+```
+     date           timestamp  
+ 2013-3-5 2013-03-05 08:00:00  
+ 2013-3-5 2013-03-05 09:00:00  
+ 2013-3-5 2013-03-05 10:00:00  
+ 2013-3-5 2013-03-05 11:00:00  
+ 2013-3-5 2013-03-05 12:00:00  
 
+```
 
