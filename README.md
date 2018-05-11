@@ -50,3 +50,14 @@ resampled_df[ ['close','MA 5','MA 30','MA 60'] ].plot()
 ```
 
 ![](https://github.com/davidkorea/stock_analyse/blob/master/stock_plot.png)
+
+# 3. UPGRATED CASE
+
+combine multi-columns to datetime and set to index, rolling
+
+## 3.1 CSV data preview
+```
+
+```
+
+## 3.2 Codes
